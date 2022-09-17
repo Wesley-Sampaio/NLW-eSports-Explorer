@@ -23,7 +23,10 @@ function getGitHubProfileInfo() {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
+      (userName.textContent = data.name), (userBio.textContent = data.bio);
       userImage.src = data.avatar_url;
+      userProfile.href = data.html_url;
+      userLogin.textContent = data.login;
     });
 }
 

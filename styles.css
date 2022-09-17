@@ -4,6 +4,20 @@
   box-sizing: border-box;
 }
 
+:root {
+  --gradient: linear-gradient(
+    90deg,
+    hsla(255, 96%, 72%, 1) 0%,
+    hsla(159, 77%, 58%, 1) 50.52%,
+    hsla(54, 70%, 62%, 1) 100%
+  );
+  --text-h1: hsla(0, 0%, 100%, 1);
+  --text-p: hsl(240, 5%, 65%);
+  --color-card: hsla(257, 16%, 18%, 1);
+  --border-img: hsla(257, 15%, 29%, 1);
+  --bg-color: hsla(240, 5%, 7%, 1);
+}
+
 ul {
   list-style: none;
 }
@@ -13,7 +27,7 @@ body {
   background-position: top center;
   background-size: 100% auto;
   background-repeat: no-repeat;
-  background-color: #121214;
+  background-color: var(--bg-color);
 }
 
 body * {
@@ -29,12 +43,7 @@ header {
 header div {
   width: 120px;
   margin: auto;
-  background-image: linear-gradient(
-    90deg,
-    #9572fc 0%,
-    #43e7ad 50.52%,
-    #e2d45c 100%
-  );
+  background-image: var(--gradient);
 
   border-radius: 50%;
 
@@ -64,21 +73,21 @@ main {
 
 section {
   color: white;
-  background-image: linear-gradient(
-    90deg,
-    #9572fc 0%,
-    #43e7ad 50.52%,
-    #e2d45c 100%
-  );
+  background-image: var(--gradient);
   padding-top: 4px;
   border-radius: 10px;
 }
 
 section div {
-  background-color: #2a2634;
+  background-color: var(--color-card);
   padding: 32px;
   padding-top: 24px;
   border-radius: 8px;
+}
+
+section a {
+  color: var(--text-p);
+  text-decoration: none;
 }
 
 section h2 {
@@ -87,7 +96,7 @@ section h2 {
 
 section p {
   letter-spacing: -0.18px;
-  color: #a1a1aa;
+  color: var(--text-p);
 }
 
 section ul {
@@ -114,7 +123,7 @@ section ul li:hover {
 .channel-list img {
   border-radius: 50%;
   width: 70px;
-  border: 1px solid #443e54;
+  border: 1px solid var(--border-img);
 }
 
 /* animation */
